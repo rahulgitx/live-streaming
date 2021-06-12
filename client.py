@@ -6,15 +6,15 @@ import numpy as np
 import cv2
 
 
-s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-ip="127.0.0.1"                  # localhost
-port=1234
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)                 # creating socket
+ip="127.0.0.1"                                                       # IP address of destination
+port=1234                                                            # port of destination IP address
 
-s.connect((ip,port))
+s.connect((ip,port))                                                 #creating the connection
 #o , addr = s.accept()
 
 cap = cv2.VideoCapture(1)
-address='https://192.168.43.1:8080/video'
+address='https://192.168.43.1:8080/video'                            # using the ip of the external webcam for using it in cap
 cap.open(address)
 
 try:
