@@ -32,7 +32,7 @@ try:
             data = pickle.loads(x)                            # serializing back the deserialized data that was received in x.
             data = cv2.imdecode(data,cv2.IMREAD_COLOR)        # doing reverse of what is done in line 27. Uncompressing and getting the info from memory buffer
             if data is not None :
-                cv2.imshow('photo',data)
+                cv2.imshow('client',data)
                 if cv2.waitKey(10) == 13 :
                     break
         except: 
